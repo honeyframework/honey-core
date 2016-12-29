@@ -16,7 +16,7 @@
     "mocha": "mocha \"lib/**/*.spec.js\" --compilers js:babel-core/register --recursive"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/honeyframework/honey-core/issues"
   },
