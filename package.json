@@ -8,10 +8,10 @@
     "url": "git+https://github.com/honeyframework/honey-core.git"
   },
   "scripts": {
-    "test": "npm run mocha",
-    "test-watch": "npm run mocha -- --watch",
     "build": "npm run webpack",
     "build-watch": "WEBPACK_BUILD=watch npm run webpack",
+    "test": "npm run mocha",
+    "test-watch": "npm run mocha -- --watch",
     "webpack": "webpack",
     "mocha": "mocha \"lib/**/*.spec.js\" --compilers js:babel-core/register --recursive"
   },
@@ -29,7 +29,7 @@
     "expect": "^1.18.0",
     "lodash": "^4.13.1",
     "mocha": "^2.4.5",
-    "webpack": "^1.13.0"
+    "webpack": "2.1.0-beta.25"
   },
   "dependencies": {
     "stylus": "^0.54.5"

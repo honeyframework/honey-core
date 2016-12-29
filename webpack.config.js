@@ -1,22 +1,25 @@
-var path = require('path');
+const path = require('path');
 
-module.exports = {
+const common = {
   entry: [
     './lib/index.js'
   ],
   output: {
-    filename: 'honey-core.js',
-    path: path.resolve(__dirname, 'build/'),
     library: 'honey-core',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'build/'),
+    filename: 'honey-core.js'
+  },
+  resolve: {
+    extensions: ['.js']
   },
   target: 'node',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [{ loader: 'babel-loader' }]
       },
       {
         test: /\.css$/,
@@ -33,4 +36,6 @@ module.exports = {
     ]
   },
   watch: process.env.WEBPACK_BUILD === 'watch' ? true : false
-}
+};
+
+module.exports = common;
